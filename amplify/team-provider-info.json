@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-roadtripgenerator-staging-d863c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::791760398329:role/amplify-roadtripgenerator-staging-d863c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::791760398329:role/amplify-roadtripgenerator-staging-d863c-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-roadtripgenerator-staging-d863c-deployment",
+      "UnauthRoleName": "amplify-roadtripgenerator-staging-d863c-unauthRole",
+      "StackName": "amplify-roadtripgenerator-staging-d863c",
+      "StackId": "arn:aws:cloudformation:us-east-1:791760398329:stack/amplify-roadtripgenerator-staging-d863c/d2f8ce80-04a9-11ef-9051-0eab4510059b",
+      "AmplifyAppId": "dw6lav2dndzxl"
+    }
+  }
+}
