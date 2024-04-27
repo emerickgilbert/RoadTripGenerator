@@ -10,6 +10,11 @@
       "StackName": "amplify-roadtripgenerator-staging-d863c",
       "StackId": "arn:aws:cloudformation:us-east-1:791760398329:stack/amplify-roadtripgenerator-staging-d863c/d2f8ce80-04a9-11ef-9051-0eab4510059b",
       "AmplifyAppId": "dw6lav2dndzxl"
+    },
+    "categories": {
+      "auth": {
+        "RoadTripGenerator": {}
+      }
     }
   }
 }
