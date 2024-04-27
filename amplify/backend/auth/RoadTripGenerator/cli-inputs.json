@@ -45,13 +45,7 @@
     "adminQueries": false,
     "thirdPartyAuth": false,
     "authProviders": [],
-    "hostedUI": true,
-    "hostedUIDomainName": "jk9d6j6o48yb",
-    "authProvidersUserPool": [
-      "Google"
-    ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid profile\",\"AttributeMapping\":{\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.dw6lav2dndzxl.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.dw6lav2dndzxl.amplifyapp.com/\"]}",
+    "hostedUI": false,
     "usernameCaseSensitive": false,
     "useEnabledMfas": true,
     "authRoleArn": {

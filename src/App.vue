@@ -1,23 +1,32 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { Authenticator } from '@aws-amplify/ui-vue'
+import '@aws-amplify/ui-vue/styles.css'
+
+import { Amplify } from 'aws-amplify'
+import config from './amplifyconfiguration.json'
+Amplify.configure(config)
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+  <!-- <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
-  </header>
-
-  <RouterView />
+  </header> -->
+  <authenticator>
+    <template v-slot="{ user, signOut }">
+      <nav>
+        <h1>Hello {{ user.username }}!</h1>
+        <button @click="signOut">Sign Out</button>
+      </nav>
+      <RouterView />
+    </template>
+  </authenticator>
 </template>
 
 <style scoped>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 import UserLocation from '@/components/UserLocation.vue'
 </script>
 
 <template>
   <main>
+    <h1>assds</h1>
     <UserLocation />
   </main>
 </template>
