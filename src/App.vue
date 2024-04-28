@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { Authenticator } from '@aws-amplify/ui-vue'
-import NavBar from '@/components/NavBar.vue'
+import Navbar from '@/components/nav/Navbar'
 </script>
 
 <template>
   <v-app class="pa-0">
     <v-layout>
-      <NavBar />
+      <Navbar />
 
       <v-main class="d-flex align-center justify-center">
         <!-- <authenticator>
