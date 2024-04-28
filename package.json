@@ -13,17 +13,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@aws-amplify/ui-vue": "^4.2.5",
     "@mdi/font": "^7.4.47",
-    "aws-amplify": "^6.1.4",
     "openrouteservice-js": "^0.3.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@aws-amplify/backend": "^0.13.4",
-    "@aws-amplify/backend-cli": "^0.14.1",
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.12.5",
@@ -31,8 +27,6 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
-    "aws-cdk": "^2.139.0",
-    "aws-cdk-lib": "^2.139.0",
     "constructs": "^10.3.0",
     "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
