@@ -14,8 +14,11 @@ export const useUserContext = defineStore('userContext', () => {
   const authenticationStatus = ref(authStatus)
   // const user = ref<User | null>(null)
 
-  watch(user, () => {
-    console.log('sss', user)
+  watch(authenticationStatus, () => {
+    console.log(authenticationStatus.value)
+    if (authenticationStatus.value == 'authenticated') {
+      router.push('/')
+    }
   })
 
   async function checkIfUserAuthenticated(): Promise<any> {
