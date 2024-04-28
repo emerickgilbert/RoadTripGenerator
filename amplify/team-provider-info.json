@@ -20,6 +20,9 @@
           "webClientId": "54ltpansoc26t9h361go7kpod",
           "nativeClientId": "54ltpansoc26t9h361go7kpod"
         }
+      },
+      "function": {
+        "getRandomLocation": {}
       }
     }
   }

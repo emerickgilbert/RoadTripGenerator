@@ -8,6 +8,13 @@
       "serviceType": "imported"
     }
   },
+  "function": {
+    "getRandomLocation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "parameters": {
     "AMPLIFY_auth_roadtripgenerator_nativeClientId": {
       "usedBy": [
