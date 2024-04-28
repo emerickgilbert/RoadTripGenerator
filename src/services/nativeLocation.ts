@@ -1,6 +1,7 @@
 // Assuming Coordinates and Location are imported from '@/models/location'
 import { Coordinates } from '@/models/Coordinates'
 import { Location } from '@/models/location'
+
 async function checkGeolocationPermission(): Promise<Location | undefined> {
   if (!navigator.geolocation) {
     console.error('Geolocation is not supported by your browser')
@@ -9,25 +10,25 @@ async function checkGeolocationPermission(): Promise<Location | undefined> {
 
   try {
     const permissionStatus = await navigator.permissions.query({ name: 'geolocation' })
-    if (permissionStatus.state === 'granted') {
+    if (permissionStatus.state === 'granted' || permissionStatus.state === 'prompt') {
+      // This will trigger a browser prompt if the permission is in 'prompt' state
       return new Promise((resolve, reject) => {
         navigator.geolocation.watchPosition(
           (position) => {
-            console.log('calledd')
             const location = new Location(
               new Coordinates(position.coords.latitude, position.coords.longitude)
             )
             resolve(location)
           },
-          (err) => {
-            console.error('Error obtaining location:', err)
-            reject(err)
+          (error) => {
+            console.error('Error obtaining location:', error)
+            reject(error)
           },
           { enableHighAccuracy: true }
         )
       })
     } else {
-      console.log('Geolocation permission not granted:', permissionStatus.state)
+      console.log('Geolocation permission denied or not granted:', permissionStatus.state)
       return undefined
     }
   } catch (error) {
@@ -35,4 +36,5 @@ async function checkGeolocationPermission(): Promise<Location | undefined> {
     return undefined
   }
 }
+
 export { checkGeolocationPermission }

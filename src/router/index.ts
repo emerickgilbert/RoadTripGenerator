@@ -1,25 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import LoginView from '@/views/LoginView.vue'
-import { useUserContext } from '@/stores/userContext'
-import SignupView from '@/views/SignupView.vue'
+import AuthenticatorView from '@/views/AuthenticatorView.vue'
+import { getCurrentUser } from 'aws-amplify/auth'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { requiresAuth: true }
     },
     {
-      path: '/login',
-      name: 'login',
-      component: LoginView
-    },
-    {
-      path: '/signup',
-      name: 'signup',
-      component: SignupView
+      path: '/authenticate',
+      name: 'authenticate',
+      component: AuthenticatorView
     },
     {
       path: '/about',
@@ -32,23 +27,15 @@ const router = createRouter({
   ]
 })
 router.beforeEach(async (to, from, next) => {
-  if (to.name == 'signup') {
-    next()
-  }
-  const userStore = useUserContext()
-
-  if (!userStore.user && to.name !== 'login') {
-    // Check if user is authenticated
-    await userStore.checkIfUserAuthenticated()
-    if (!userStore.user) {
-      next({ name: 'login' })
-    } else {
-      next()
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    try {
+      const user = await getCurrentUser()
+      next() // User is authenticated, proceed to route
+    } catch (error) {
+      next({ name: 'authenticate' }) // Redirect to login page
     }
-  } else if (to.name == 'login' && userStore.user) {
-    console.log('should not')
   } else {
-    next()
+    next() // Proceed if the route does not require authentication
   }
 })
 export default router

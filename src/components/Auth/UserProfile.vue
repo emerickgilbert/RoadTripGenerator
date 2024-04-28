@@ -1,36 +1,21 @@
 <script setup lang="ts">
-import { User } from '@/models/user'
-import { ref, defineEmits, computed } from 'vue'
-const props = defineProps({ user: User })
+import { ref, defineEmits } from 'vue'
+const props = defineProps({ user: Object })
 const user = ref(props.user)
 const emit = defineEmits(['request:signoff'])
-
-const initial = computed<any | undefined>(() => {
-  if (!user.value?.fullName) {
-    return null
-  } else {
-    return user.value.fullName
-      .split(' ')
-      .filter((word) => word.length > 0)
-      .map((word) => word[0].toUpperCase()) // Convert to uppercase if needed
-      .join('')
-  }
-})
 </script>
 
 <template>
   <v-menu rounded>
     <template v-slot:activator="{ props }">
       <v-btn icon v-bind="props">
-        <v-avatar color="blue" size="large">
-          <span class="text-h5">{{ initial }}</span>
-        </v-avatar>
+        <v-avatar color="blue" icon="mdi-account-circle"> </v-avatar>
       </v-btn>
     </template>
     <v-card>
       <v-card-text>
         <div class="mx-auto text-center">
-          <h3>{{ user?.fullName }}</h3>
+          <h3>{{ user?.username }}</h3>
           <p class="text-caption mt-1">
             {{ user?.email }}
           </p>
