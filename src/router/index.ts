@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import PageNotFoundView from '../views/PageNotFoundView.vue'
 import AuthenticatorView from '@/views/AuthenticatorView.vue'
-import PageNotFoundView from '@/views/PageNotFoundView.vue'
 import { getCurrentUser } from 'aws-amplify/auth'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
