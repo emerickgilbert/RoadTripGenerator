@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import { useLocationContext } from '@/stores/locationContext'
+import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 
 const locationContext = useLocationContext()
