@@ -1,5 +1,6 @@
 <template>
-  <v-app-bar id="app-bar" title="RoadTrip Generator">
+  <v-app-bar id="app-bar">
+    <v-app-bar-title @click="$router.push('/')">RoadTrip Generator</v-app-bar-title>
     <UserProfile v-if="user" @request:signoff="signOut()" :user="user" />
     <v-btn v-else @click="router.push('/authenticate')">Login</v-btn>
   </v-app-bar>

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AuthenticatorView from '@/views/AuthenticatorView.vue'
+import PageNotFoundView from '@/views/PageNotFoundView.vue'
 import { getCurrentUser } from 'aws-amplify/auth'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,10 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*', // Catch-all route for unmatched paths
+      component: PageNotFoundView
     }
   ]
 })
