@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-roadtripgenerator-staging-d863c-unauthRole",
       "StackName": "amplify-roadtripgenerator-staging-d863c",
       "StackId": "arn:aws:cloudformation:us-east-1:791760398329:stack/amplify-roadtripgenerator-staging-d863c/d2f8ce80-04a9-11ef-9051-0eab4510059b",
-      "AmplifyAppId": "dw6lav2dndzxl"
+      "AmplifyAppId": "dw6lav2dndzxl",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-roadtripgenerator-staging-d863c-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -33,6 +34,9 @@
           "deploymentBucketName": "amplify-roadtripgenerator-staging-d863c-deployment",
           "s3Key": "amplify-builds/getRandomLocation-4558617137736b5a3358-build.zip"
         }
+      },
+      "api": {
+        "api": {}
       }
     }
   }

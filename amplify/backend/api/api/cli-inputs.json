@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/openrouteservice/generaterandomlocation": {
+      "name": "/openrouteservice/generaterandomlocation",
+      "lambdaFunction": "getRandomLocation",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "read"
+        ]
+      }
+    }
+  }
+}
