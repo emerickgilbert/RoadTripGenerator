@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { Authenticator } from '@aws-amplify/ui-vue'
-import Navbar from '@/components/nav/Navbar'
+import Navbar from './components/Nav/Navbar.vue'
 </script>
 
 <template>

@@ -5,9 +5,9 @@
   </v-app-bar>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
-import UserProfile from './Auth/UserProfile.vue'
+import UserProfile from '@/components/Auth/UserProfile.vue'
 import { storeToRefs } from 'pinia'
 import { useUserContext } from '@/stores/userContext'
 import router from '@/router'
