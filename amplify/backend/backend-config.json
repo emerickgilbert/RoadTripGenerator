@@ -47,6 +47,22 @@
           "resourceName": "roadtripgenerator"
         }
       ]
+    },
+    "AMPLIFY_function_getRandomLocation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRandomLocation"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRandomLocation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRandomLocation"
+        }
+      ]
     }
   }
 }

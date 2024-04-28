@@ -22,7 +22,10 @@
         }
       },
       "function": {
-        "getRandomLocation": {}
+        "getRandomLocation": {
+          "deploymentBucketName": "amplify-roadtripgenerator-staging-d863c-deployment",
+          "s3Key": "amplify-builds/getRandomLocation-4558617137736b5a3358-build.zip"
+        }
       }
     }
   }
