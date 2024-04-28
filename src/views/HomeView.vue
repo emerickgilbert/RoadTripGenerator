@@ -3,8 +3,7 @@ import UserLocation from '@/components/UserLocation.vue'
 </script>
 
 <template>
-  <main>
-    <h1>assds</h1>
+  <v-container>
     <UserLocation />
-  </main>
+  </v-container>
 </template>

@@ -1,4 +1,6 @@
 import './assets/main.css'
+import '@mdi/font/css/materialdesignicons.css'
+import '@aws-amplify/ui-vue/styles.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -10,8 +12,19 @@ import router from './router'
 
 const app = createApp(App)
 Amplify.configure(config)
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-app.use(createPinia())
+const vuetify = createVuetify({
+  components,
+  directives,
+  theme: { defaultTheme: 'light' }
+})
 app.use(router)
+app.use(vuetify)
+app.use(createPinia())
 
 app.mount('#app')
