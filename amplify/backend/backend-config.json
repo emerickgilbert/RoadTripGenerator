@@ -1,6 +1,6 @@
 {
   "auth": {
-    "roadtripgenerator": {
+    "roadtripgenerator38f737cc": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -16,35 +16,91 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_roadtripgenerator_nativeClientId": {
+    "AMPLIFY_auth_roadtripgenerator38f737cc_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "roadtripgenerator"
+          "resourceName": "roadtripgenerator38f737cc"
         }
       ]
     },
-    "AMPLIFY_auth_roadtripgenerator_userPoolId": {
+    "AMPLIFY_auth_roadtripgenerator38f737cc_authRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "roadtripgenerator"
+          "resourceName": "roadtripgenerator38f737cc"
         }
       ]
     },
-    "AMPLIFY_auth_roadtripgenerator_userPoolName": {
+    "AMPLIFY_auth_roadtripgenerator38f737cc_authRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "roadtripgenerator"
+          "resourceName": "roadtripgenerator38f737cc"
         }
       ]
     },
-    "AMPLIFY_auth_roadtripgenerator_webClientId": {
+    "AMPLIFY_auth_roadtripgenerator38f737cc_identityPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "roadtripgenerator"
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
+        }
+      ]
+    },
+    "AMPLIFY_auth_roadtripgenerator38f737cc_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "roadtripgenerator38f737cc"
         }
       ]
     },

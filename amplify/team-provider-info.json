@@ -14,11 +14,18 @@
     "categories": {
       "auth": {
         "RoadTripGenerator": {},
-        "roadtripgenerator": {
+        "roadtripgenerator38f737cc": {
           "userPoolId": "us-east-1_mvR2jfA1B",
           "userPoolName": "RoadTripGenerator",
           "webClientId": "54ltpansoc26t9h361go7kpod",
-          "nativeClientId": "54ltpansoc26t9h361go7kpod"
+          "nativeClientId": "54ltpansoc26t9h361go7kpod",
+          "identityPoolId": "us-east-1:46246e7c-0644-47f8-a515-f4dbf5932215",
+          "identityPoolName": "RoadTripGenerator",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::791760398329:role/service-role/user",
+          "authRoleName": "user",
+          "unauthRoleArn": "arn:aws:iam::791760398329:role/service-role/guest",
+          "unauthRoleName": "guest"
         }
       },
       "function": {

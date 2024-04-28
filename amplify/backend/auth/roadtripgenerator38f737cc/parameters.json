@@ -1,6 +1,6 @@
 {
-  "authSelections": "userPoolOnly",
-  "resourceName": "roadtripgenerator",
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "roadtripgenerator38f737cc",
   "serviceType": "imported",
   "region": "us-east-1",
   "aliasAttributes": [
